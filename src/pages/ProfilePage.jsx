@@ -125,8 +125,10 @@ export default function Profile() {
                     onChange={handleInputChange}
                   />
                 </p>
+                <div className='mt-5'>
                 <input type="file" onChange={handleFileInputChange} />
-                <button onClick={handleUpload}>Upload Profile Picture</button>
+                <button className='border border-gray-500 rounded px-4 bg-gray-200 text-gray-700 hover:bg-gray-300 hover:text-gray-800 mt-2' onClick={handleUpload}>Upload Profile Picture</button>
+                </div>
               </div>
                 <button className="bg-green-300 hover:bg-green-200 text-green-800 font-bold py-2 px-4 border-b-4 border-green-500 hover:border-green-500 rounded mt-3 mr-3 ml-3" onClick={handleSave}>Save</button>
               </>
@@ -136,7 +138,8 @@ export default function Profile() {
                 {profilePictureUrl ? (
                   <img src={profilePictureUrl} alt="Profile Picture" style={{ width: '100px', height: '100px' }} />
                 ) : (
-                  <div style={{ width: '100px', height: '100px', backgroundColor: 'lightgray' }}></div>
+                  <div style={{ width: '100px', height: '100px', backgroundColor: 'lightgray', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '12px' }}>no profile yet</div>
+
                 )}
               </div>
               <div  className='bg-gray-200 p-10 m-3'>
